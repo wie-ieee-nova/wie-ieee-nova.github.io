@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.style.animationDuration = `${Math.random() * 10 + 5}s`;
         background.appendChild(dot);
     }
-
-    // Load the 'home' section by default on page load
-    toggleSection('home');
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
