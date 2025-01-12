@@ -1,0 +1,47 @@
+#home {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#home h1 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#home h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+#home ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#home ul li {
+    background: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+}
+
+#home ul li strong {
+    color: #007bff;
+}
+
+#home a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#home a:hover {
+    text-decoration: underline;
+}
