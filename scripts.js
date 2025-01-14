@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.style.animationDuration = `${Math.random() * 10 + 5}s`;
         background.appendChild(dot);
     }
+
+    // Check if any section is selected; if not, default ot 'home'
+    const selectedSection = document.querySelector('.site-nav a.active');
+    if (!selectedSection) {
+        toggleSection('home');
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
