@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!selectedSection) {
         toggleSection('home');
     }
+
+    fetchEvents();
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
