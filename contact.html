@@ -1,0 +1,32 @@
+<section id="page">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <altcha-widget challengeurl="http://localhost:8080/scripts/altcha.min.js"></altcha-widget>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const captcha = document.getElementById('captcha').value;
+    
+    //const recipient = 'ieee-nova-wie' + '@' + 'googlegroups.com';
+    const recipient = 'alice@ieee.org';
+    
+    const mailtoLink = `mailto:${recipient}?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+});
+</script>

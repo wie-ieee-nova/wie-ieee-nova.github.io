@@ -1,26 +1,47 @@
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
     padding: 0;
     margin: 0;
 }
 
 nav {
-    min-height: 40px;
+    min-height: 2em;
     background: #000000;
     color: #ffffff;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+#ieee-meta-a {
+    color: #fff;
+    text-align: left;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    float: left;
+}
+
+#ieee-meta-a a:link, #ieee-meta-a a:visited, #ieee-meta-a a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+#ieee-meta-a a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 #meta-ieee-logo {
-    margin: 0px;
-    float:right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
 }
 
 #meta-ieee-logo .joinIEEE{
     float: right;
     color: #fff;
-    padding: 11px 16px;
+    padding: 1.5em 1em;
 }
 
 #meta-ieee-logo .joinIEEE:link, #meta-ieee-logo .joinIEEE:visited, #meta-ieee-logo .joinIEEE:active {
@@ -38,7 +59,7 @@ nav {
 }
 
 #meta-ieee-logo img{
-    padding: 5px 36px 0px 0px;
+    padding: 0.5em 3em 0 0;
 }
 
 /* website specific styles */
@@ -47,7 +68,6 @@ nav {
     color: white;
     position: relative;
     z-index: 1;
-    padding: 10px 0;
 }
 
 .site-nav ul {
@@ -65,70 +85,53 @@ nav {
 }
 
 .site-nav ul li a {
-    color: white;
+    color: lightyellow;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-weight: bolder;
+    font-size: 1.2rem;
     display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: 1em 0.7em;
 }
 
 .site-nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-/* end: website specific styles */
 
-#page {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-} 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-@media (max-width: 800px) {
-nav {
-    min-height: 100px;
-    background: #000000;
-    color: #ffffff;
-    padding: 0px;
-    margin: 0px;
+.wie-logo {
+    display: flex;
+    align-items: flex-end; 
 }
-.meta-ieee-logo {
-    padding: 20px 0px 0px 0px;
-    float:right;
-    max-width: 100px;
+
+.wie-logo img {
+    margin-top: 1em;
+    margin-left: 5em;
 }
+
+.wie-logo h1 {
+    color: white;
+    margin-left: 1em;
+    margin-bottom: 0;
+    opacity: 0.55;
+    text-transform: uppercase;
+    font-family: serif;
 }
 
 p {
     font-family: inherit;
     font-size: .9em;
-    line-height: 125%;
-    border: 0;
-    margin: 0;
-}
-
-#ieee-meta-a {
-    color: #fff;
-    text-align: left;
-    padding: 11px 36px;
-    float: left;
-}
-
-#ieee-meta-a a:link, #ieee-meta-a a:visited, #ieee-meta-a a:active {
-    color: #fff;
-    text-decoration: none;
-}
-
-#ieee-meta-a a:hover {
-    color: #fff;
-    text-decoration: underline;
 }
 
 footer {
-    padding: 20px;
+    padding: 5em;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.7em;
     color: #fff;
 }
 
@@ -143,7 +146,7 @@ footer a:hover {
 
 #background {
     /* purple background with gradient at center */
-    background: linear-gradient(135deg, #8e44ad, #3498db);
+    background: linear-gradient(135deg, #8e44ad, #03020a);
     position: fixed;
     top: 0;
     left: 0;
@@ -168,5 +171,57 @@ footer a:hover {
     }
     100% {
         transform: translateY(-100vh);
+    }
+}
+
+@media (max-width: 800px) {
+    nav {
+        min-height: 65px;
+        background: #000000;
+        color: #ffffff;
+        padding: 0;
+        margin: 0;
+    }
+    #ieee-meta-a {
+        display: none;
+    }
+    #meta-ieee-logo {
+        padding: 1em 0 0 0;
+        float:right;
+        max-width: 100px;
+    }
+    #meta-ieee-logo img{
+        max-width: 100px;
+        float: center;
+    }
+    #meta-ieee-logo .joinIEEE{
+        display: none;
+    }
+    .site-nav ul {
+        flex-direction: row;
+    }
+    .site-nav ul li {
+        margin: 0.5em;
+    }
+    .site-nav ul li a {
+        font-size: 0.7rem;
+    }
+    .wie-logo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .wie-logo img {
+        margin-top: 0.5em;
+        margin-left: 0;
+        max-height: 120px;
+    }
+    .wie-logo h1 {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    footer {
+        padding: 2em;
+        margin: 0;
+        text-align: left;
     }
 }

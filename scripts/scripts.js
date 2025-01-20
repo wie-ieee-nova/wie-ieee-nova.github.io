@@ -14,12 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Check if any section is selected; if not, default ot 'home'
-    const selectedSection = document.querySelector('.site-nav a.active');
-    if (!selectedSection) {
-        toggleSection('home');
-    }
-
-    fetchEvents();
+    const selectedSection = localStorage.getItem('lastSection') || 'home';
+    toggleSection(selectedSection);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -44,6 +40,8 @@ function toggleSection(sectionId) {
         .then(html => {
             document.getElementById('page').innerHTML = html;
             document.getElementById('page').style.display = 'block';
+            // Save last toggled section
+            localStorage.setItem('lastSection', sectionId);
         })
         .catch(error => {
             console.error('Error loading section: ', error);

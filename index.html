@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>WiE at IEEE NoVA</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/sections.css">
-	<script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles/contact.css">
+	<script src="scripts/scripts.js"></script>
 	<link rel="icon" href="img/ieee_favicons/favicon.ico" type="image/x-icon">
 </head>
 <header>
@@ -26,19 +27,21 @@
 		<ul>
 			<li><a href="#home" onclick="toggleSection('home')">Home</a></li>
 			<li><a href="#about" onclick="toggleSection('about')">About</a></li>
-			<li><a href="#calendar" onclick="toggleSection('calendar')">Calendar of Events</a></li>
-			<li><a href="#contact" onclick="toggleSection('contact')">Contact Us</a></li>
+			<li><a href="#calendar" onclick="toggleSection('calendar')">Calendar</a></li>
+			<li><a href="#contact" onclick="toggleSection('gallery')">Gallery</a></li>
 		</ul>
 	</nav>
 </header>
 <body>
-	<img src="img/WIE_logo_white_RGB_72.png" alt="WIE Logo" style="vertical-align: middle; margin-top: 1em; margin-left: 2em">
+	<div class="wie-logo">
+		<img src="img/WIE_logo_white_RGB_72.png" alt="WIE Logo">
+		<h1>Northern Virginia Section</h1>
+	</div>
 	<section id="page"></section>
 </body>
 <footer>
 	<hr style="width: 70%; border: 1px solid #aaa;"/>
-	<p>This site is the homepage for the Women in Engineering affinity group at <a href="https://r2.ieee.org/nova/">IEEE NoVA</a> section.</p>
-	<p>For any questions, comments, or concerns, please reach out in the <a href="#" onclick="toggleSection('contact'); return false;">Contact section</a>.
-	We look forward to hearing from you!</p><p>(Last updated: Dec. 2024)</p>
+	<p>This is the home site of Women in Engineering affinity group of <a href="https://r2.ieee.org/nova/">IEEE NoVA</a>, in Region 2.
+	If you have questions or concerns, <a href="mailto:ieee-nova-wie@googlegroups.com">shoot us an email</a>.</p><p>Last updated: Dec. 2024.</p>
 </footer>
 </html>

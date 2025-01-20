@@ -1,8 +1,15 @@
 #page {
-        padding: 15px;
-        line-height: 1.6;
-        color: #fff; /* White text for contrast */
-    }
+    padding: 0 10em;
+    line-height: 1.6;
+    color: #fff; /* White text for contrast */
+}
+
+#page .intro-image {
+    margin: auto;
+    margin-top: 3em;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
 
 #page h1 {
     color: #f1c40f; /* Yellow color for contrast */
@@ -39,7 +46,7 @@
 }
 
 #page a {
-    color: #f1c40f; /* Yellow color for contrast */
+    color: #f2dd87; /* Yellow color for contrast */
     text-decoration: none;
 }
 
@@ -57,7 +64,7 @@
     border-radius: 70%;
     width: 300px;
     height:300px;
-    margin-right: 20px;
+    margin-right: 2em;
 }
 
 #page .profile .bio {
@@ -67,11 +74,43 @@
 #page .profile .bio h3 {
     color: #f1c40f; /* Yellow color for contrast */
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 #page .profile .bio p {
     color: #fff; /* White text for contrast */
     margin: 5px 0;
     font-size: 1em;
+}
+
+/* Responsive section content */
+@media (max-width: 800px) {
+    #page {
+        padding: 1em;
+    }
+    #page h1 {
+        font-size: 1.5em;
+    }
+    #page h2 {
+        font-size: 1.2em;
+    }
+    #page p {
+        font-size: 0.9em;
+    }
+    #page ul li {
+        padding: 5px;
+    }
+    #page .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    #page .profile img {
+        width: 50%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+    #page .profile .bio {
+        max-width: 100%;
+        margin-bottom: 3em;
+    }
 }
